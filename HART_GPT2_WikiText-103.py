@@ -316,7 +316,7 @@ for epoch in range(start_epoch, EPOCHS + 1):
                     best_step_ppl = log_ppl
 
                 print(
-                    f"  [Epoch {epoch} | Step {global_step:5d}] LR: {current_lr:.6e} | Step Loss: {avg_log_loss:.4f} | Step PPL: {log_ppl:.2f} | 🏆 Best Step PPL: {best_step_ppl:.2f}")
+                    f"  [Epoch {epoch} | Step {global_step:5d}] LR: {current_lr:.6e} | Step Loss: {avg_log_loss:.4f} | Step PPL: {log_ppl:.2f} | Best Step PPL: {best_step_ppl:.2f}")
 
                 log_loss_sum = 0.0
                 log_step_count = 0
