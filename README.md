@@ -104,7 +104,7 @@ To support transparent evaluation and reproducibility:
 ## Why TPU Resources Are Required
 Thus far, initial development and core algorithmic validation of HART were conducted using a single consumer-grade NVIDIA RTX 4060 GPU. To achieve the larger-scale empirical results presented above, we had to rely on personal, out-of-pocket expenses to rent private cloud GPU instances. 
 
-While this constrained and self-funded approach successfully validated our core innovations—including achieving state-of-the-art memory efficiency via our 2-buffer state mechanism—it is financially unsustainable and severely limits our ability to perform the massive-scale studies required for modern optimizer research.
+The currently open-sourced version in this repository (HART-v2) focuses on validating the core mathematical breakthrough: Dynamic Orthogonal Noise Scraping. While this public version utilizes a 4-buffer state to explicitly calculate gradient variances, our internal advanced iteration (HART-v3)—which will be fully open-sourced upon paper publication—has successfully compressed this architecture into a 2-buffer state mechanism, matching the exact memory footprint of AdamW without any performance degradation.
 
 Access to Google TRC TPU infrastructure would definitively solve this compute bottleneck and enable us to:
 * Scale experiments to larger foundation models such as GPT-2 Large/XL and ViT-Large without financial constraints.
