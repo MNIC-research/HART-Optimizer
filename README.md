@@ -102,13 +102,15 @@ To support transparent evaluation and reproducibility:
 ---
 
 ## Why TPU Resources Are Required
-Thus far, all development and experimentation have been conducted using a single consumer-grade NVIDIA RTX 4060 GPU. While this environment has been sufficient to validate the core algorithmic innovations (achieving state-of-the-art memory-efficient optimization via our 2-buffer state mechanism), it severely limits the ability to perform the large-scale empirical studies required for modern optimizer research.
+Thus far, initial development and core algorithmic validation of HART were conducted using a single consumer-grade NVIDIA RTX 4060 GPU. To achieve the larger-scale empirical results presented above, we had to rely on personal, out-of-pocket expenses to rent private cloud GPU instances. 
 
-Access to Google TRC TPU infrastructure would enable us to:
-* Scale experiments to larger foundation models such as GPT-2 Large/XL and ViT-Large.
+While this constrained and self-funded approach successfully validated our core innovations—including achieving state-of-the-art memory efficiency via our 2-buffer state mechanism—it is financially unsustainable and severely limits our ability to perform the massive-scale studies required for modern optimizer research.
+
+Access to Google TRC TPU infrastructure would definitively solve this compute bottleneck and enable us to:
+* Scale experiments to larger foundation models such as GPT-2 Large/XL and ViT-Large without financial constraints.
 * Perform large-scale hyperparameter ablation studies and investigate optimization scaling laws.
 * Evaluate robustness under longer-context language modeling settings.
 * Validate cross-domain generalization on substantially larger datasets such as full ImageNet-1k.
 * Complete the comprehensive empirical evaluation necessary for submission to top-tier machine learning conferences (e.g., ICLR).
 
-The proposed research is specifically compute-bound rather than idea-bound. TPU access would directly accelerate the final validation of a highly promising, memory-efficient optimizer framework that has already demonstrated exceptional results across language modeling, transfer learning, and attention-based architectures.
+The proposed research is strictly compute-bound rather than idea-bound. TPU access would directly accelerate the final validation of a highly promising optimizer framework, spearheaded by a dedicated researcher ready to fully utilize the provided infrastructure.
