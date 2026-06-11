@@ -76,7 +76,7 @@ Evaluated across various scale datasets and modern architectures.
 | ConvNeXT | 75.11 | **75.43** | 74.70 | AdamW |
 | ViT-Tiny | **68.10** | 67.88 | 68.02 | **HART** |
 
-*While standard CNN architectures—which have been heavily co-optimized with AdamW and SGD over the past decade—show competitive but mixed results, **HART demonstrates a clear and consistent advantage on Vision Transformers (ViTs).** Across CIFAR-100 and ImageNet, HART outperforms both AdamW and Lion on ViT-Tiny.*
+*HART demonstrates consistent advantages on ViT architectures across all dataset scales, while showing competitive performance on CNN-based models.*
 
 ---
 
