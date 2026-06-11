@@ -32,7 +32,7 @@ Evaluated on autoregressive language modeling tasks trained entirely from scratc
 
 *Under this standardized setup, HART demonstrated significantly faster early-stage convergence and consistently improved perplexity (PPL). Most notably, during high-intensity regularization experiments targeting the "loss of plasticity" problem, HART achieved a peak validation PPL of 18.94 on GPT-2 Small under an extreme weight decay configuration (WD=0.30). By comparison, the strongest AdamW baseline collapsed at higher settings, peaking at 19.58.*
 
-*Crucially, **as the model scales, the optimizer's advantage widens.** On GPT-2 Medium, the performance gap between HART (17.45) and AdamW (18.55) expanded to a massive **1.10 PPL absolute improvement**, all while operating in a completely warm-up-free regime.*
+*Crucially, **as the model scales, the optimizer's advantage widens.** On GPT-2 Medium, the performance gap between HART (17.45) and AdamW (18.55) expanded to a substantial **1.10 PPL absolute improvement**, all while operating in a completely warm-up-free regime.*
 
 ---
 
