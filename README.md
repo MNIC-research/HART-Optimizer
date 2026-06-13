@@ -7,9 +7,13 @@ This project aims to scale up and comprehensively benchmark HART, a novel cross-
 
 While AdamW remains the dominant optimization baseline in modern deep learning, its convergence behavior can become increasingly sensitive under aggressive regularization and large-scale optimization settings. HART was developed to address these limitations through a more structured optimization framework with explicit and fine-grained control mechanisms.
 
-By refining our core algorithmic architecture, the latest iteration of HART implements a highly memory-efficient **2-buffer state mechanism**, matching the exact state memory footprint of AdamW while preserving its robust optimization trajectories and advanced regularization capabilities.
+By refining our core algorithmic architecture, the latest iteration of HART implements a highly memory-efficient 2-buffer state mechanism, matching the exact state memory footprint of AdamW while preserving its robust optimization trajectories and advanced regularization capabilities.
 
 The primary objective of this project is to validate whether these improvements persist under larger-scale training regimes and foundation-model workloads.
+
+Preliminary Results & Empirical Evidence
+
+🚨 Please Note: All experiments, benchmarks, and performance metrics presented below were conducted using the advanced, memory-efficient HART-v3 iteration.
 
 ---
 
