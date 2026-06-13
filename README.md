@@ -101,16 +101,17 @@ To support transparent evaluation and reproducibility:
 
 ---
 
-## Why TPU Resources Are Required
-Thus far, initial development and core algorithmic validation of HART were conducted using a single consumer-grade NVIDIA RTX 4060 GPU. To achieve the larger-scale empirical results presented above, we had to rely on personal, out-of-pocket expenses to rent private cloud GPU instances. 
+## Why Large-Scale Compute (GPU/TPU) Support is Required
+Thus far, initial Phase 1 development and core algorithmic validation of HART were predominantly conducted using a single consumer-grade NVIDIA RTX 4060 GPU. To achieve the larger-scale empirical results presented above (e.g., GPT-2 Medium, ImageNet), we had to rely heavily on personal, out-of-pocket expenses to rent private cloud GPU services.
 
 The currently open-sourced version in this repository (HART-v2) focuses on validating the core mathematical breakthrough: Dynamic Orthogonal Noise Scraping. While this public version utilizes a 4-buffer state to explicitly calculate gradient variances, our internal advanced iteration (HART-v3)—which will be fully open-sourced upon paper publication—has successfully compressed this architecture into a 2-buffer state mechanism, matching the exact memory footprint of AdamW without any performance degradation.
 
-Access to Google TRC TPU infrastructure would definitively solve this compute bottleneck and enable us to:
-* Scale experiments to larger foundation models such as GPT-2 Large/XL and ViT-Large without financial constraints.
-* Perform large-scale hyperparameter ablation studies and investigate optimization scaling laws.
-* Evaluate robustness under longer-context language modeling settings.
-* Validate cross-domain generalization on substantially larger datasets such as full ImageNet-1k.
-* Complete the comprehensive empirical evaluation necessary for submission to top-tier machine learning conferences (e.g., ICLR).
+To advance to Phase 2 of our research and definitively prove HART's scaling laws for an ICLR submission, access to institutional high-performance compute infrastructure (such as NVIDIA H100/H200 multi-node GPU clusters or Google TRC TPU environments) is strictly required. Securing this infrastructure will definitively solve our current compute bottleneck and enable us to:
 
-The proposed research is strictly compute-bound rather than idea-bound. TPU access would directly accelerate the final validation of a highly promising optimizer framework, spearheaded by a dedicated researcher ready to fully utilize the provided infrastructure.
+* Scale to Foundation Models: Train 1B+ parameter architectures (e.g., GPT-2 Large/XL, Llama-1B, and ViT-Large) from scratch without crippling financial constraints.
+* Execute Rigorous Multi-Seed Validation: Perform comprehensive multi-seed runs across all major experiments to guarantee the statistical significance of HART's stability advantages.
+* Re-evaluate GLUE at Aggressive Learning Rates: Conduct extensive re-testing of the GLUE benchmark at much higher learning rates (leveraging recent insights from our VTAB experiments, which revealed HART's exceptional robustness in high-LR regimes).
+* Complete Ablation Studies: Perform large-scale hyperparameter ablation studies and complete all supplementary experiments required for the appendix of a top-tier conference paper.
+* Validate Cross-Domain Generalization: Test on substantially larger datasets (e.g., full ImageNet-1k, large-scale web text corpora) to solidify empirical claims.
+
+The proposed research is strictly compute-bound rather than idea-bound. Securing large-scale GPU or TPU support will directly accelerate the final validation of a highly promising, globally competitive optimizer framework, spearheaded by a dedicated researcher ready to fully utilize the provided infrastructure.
