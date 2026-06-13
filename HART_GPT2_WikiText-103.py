@@ -15,8 +15,8 @@ import datetime
 from torch.optim.lr_scheduler import _LRScheduler
 
 class HART(optim.Optimizer):
-    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), beta_window=0.97,
-                 range_val=1.2, base_wd=0.05, eps=1e-8):
+    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), beta_window=0.07,
+                 range_val=0.1, base_wd=0.05, eps=1e-8):
         defaults = dict(lr=lr, betas=betas, beta_window=beta_window,
                         range_val=range_val, base_wd=base_wd, eps=eps)
         super(HART, self).__init__(params, defaults)
@@ -214,7 +214,7 @@ test_loader = DataLoader(WikiDataset("test", BLOCK_SIZE), batch_size=BATCH_SIZE,
 config = GPT2Config()
 model = GPT2LMHeadModel(config).to(device)
 
-optimizer = HART(model.parameters(), lr=LR, base_wd=WD, beta_window=0.97, range_val=1.2)
+optimizer = HART(model.parameters(), lr=LR, base_wd=WD, beta_window=0.07, range_val=0.2)
 # optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=0.01)
 # optimizer = Lion(model.parameters(), lr=LR, betas=(0.9, 0.99), weight_decay=WD)
 
